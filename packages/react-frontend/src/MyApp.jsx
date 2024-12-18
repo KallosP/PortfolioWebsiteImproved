@@ -1,11 +1,16 @@
 // src/MyApp.jsx
 //import React from 'react'
+import Navbar from './Navbar'
+import Home from './Home'
+import Projects from './Projects'
 
 function MyApp() {
 	return (
-		<div>
-			<h1>Hello, React!</h1>
-		</div>
+		<>
+			<Navbar />
+			<Home />
+			<Projects />
+		</>
 	)
 }
 export default MyApp
