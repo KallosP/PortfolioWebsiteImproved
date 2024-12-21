@@ -1,9 +1,10 @@
 //import React from 'react'
 import '../styles/navbar.css'
+import closeIcon from '../assets/svg-icons/close.svg'
 
 function Navbar() {
 	return (
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light mx-3 my-3 c-main-nav">
 			<div class="container-fluid justify-content-center">
 				<button
 					class="navbar-toggler"
@@ -13,11 +14,11 @@ function Navbar() {
 					aria-controls="navbarNav"
 					aria-expanded="false"
 					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+					<img src={closeIcon} alt="Close" />
 				</button>
-				<div class="collapse navbar-collapse " id="navbarNav">
+				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav align-items-center">
-						<li class="nav-item">
+						<li class="nav-item first-li">
 							<a class="nav-link" aria-current="page" href="#">
 								Home
 							</a>

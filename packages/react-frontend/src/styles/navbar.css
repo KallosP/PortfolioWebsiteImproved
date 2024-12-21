@@ -1,1 +1,39 @@
+@import url('../constants/theme-colors.css');
 
+/* Top nav component */
+.c-main-nav {
+	background-color: rgba(var(--background), 0.8);
+	backdrop-filter: blur(4px);
+	border-radius: 10px;
+	color: var(--title-text);
+}
+
+/* Hamburger button */
+.navbar-toggler {
+	/* Centers image icon */
+	display: flex;
+	border-color: var(--description-text);
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.custom-navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Links */
+.nav-link {
+	color: var(--description-text);
+}
+
+.first-li {
+	margin-top: 10px !important;
+}
+
+.nav-item {
+	width: 100%;
+	border: 1px solid var(--description-text);
+	border-radius: 100px;
+	text-align: center;
+	margin: 5px;
+}
