@@ -38,7 +38,7 @@ function Navbar() {
 								Education
 							</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item last-li">
 							<a class="nav-link" href="#">
 								Contact
 							</a>
