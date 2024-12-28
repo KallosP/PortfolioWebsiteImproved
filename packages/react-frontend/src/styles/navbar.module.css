@@ -8,7 +8,7 @@
 }
 
 /* Hamburger button */
-.navbar-toggler {
+.c-navbar-toggler {
 	/* Centers image icon */
 	display: flex;
 	border-color: var(--description-text);
@@ -20,29 +20,29 @@
 		background-color 0.3s ease;
 }
 
-.navbar-toggler:hover {
+.c-navbar-toggler:hover {
 	border-color: rgb(var(--title-text));
-	background-color: rgb(var(--title-text), 0.1);
+	background-color: rgba(var(--title-text), 0.1);
 }
 
-.navbar-toggler:focus {
+.c-navbar-toggler:focus {
 	color: transparent;
 }
 
-.custom-navbar-toggler-icon {
+.c-navbar-toggler-icon {
 	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /* Links */
-.nav-link {
+.c-nav-link {
 	color: var(--description-text) !important;
 }
 
-.first-li {
+.c-first-li {
 	margin-top: 10px !important;
 }
 
-.nav-item {
+.c-nav-item {
 	transition:
 		border-color 0.3s ease,
 		background-color 0.3s ease;
@@ -53,23 +53,22 @@
 	margin: 5px;
 }
 
-.nav-link:focus {
+.c-nav-link:focus {
 	color: var(--description-text);
 }
 
-.nav-item:hover {
+.c-nav-item:hover {
 	border-color: rgb(var(--title-text));
-	background-color: rgb(var(--title-text), 0.1);
+	background-color: rgba(var(--title-text), 0.1);
 }
 
-.nav-item:hover .nav-link {
+.c-nav-item:hover .c-nav-link {
 	color: rgb(var(--title-text));
 }
 
 /* Styles applied on screens >= 992px (lg) */
 @media (min-width: 992px) {
-	/* Top nav component */
-	.navbar {
+	.c-main-nav {
 		width: fit-content;
 		justify-self: center;
 		justify-content: center;
@@ -78,30 +77,28 @@
 		padding: 0px;
 	}
 
-	/* Links container (ul) */
-	.navbar-nav {
+	.c-navbar-nav {
 		padding: 0px;
 	}
 
-	/* Links */
-	.nav-item {
+	.c-nav-item {
 		padding: 7px;
 		margin: 8px 5px;
 	}
 
-	.nav-item:active .nav-link {
+	.c-nav-item:active .c-nav-link {
 		color: rgb(var(--title-text)) !important;
 	}
 
-	.first-li {
+	.c-first-li {
 		margin: 5px 5px 5px 0px !important;
 	}
 
-	.last-li {
+	.c-last-li {
 		margin: 5px 0px 5px 5px !important;
 	}
 
-	.nav-link {
+	.c-nav-link {
 		padding: 0px;
 	}
 }

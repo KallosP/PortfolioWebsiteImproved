@@ -1,9 +1,9 @@
 @import url('../constants/theme-colors.css');
 
 .c-div-content {
-    padding-top: 100px;
+	padding-top: 100px;
 }
 
 .c-home-p {
-    justify-self: flex-start;
+	justify-self: flex-start;
 }
