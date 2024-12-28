@@ -2,8 +2,8 @@
 
 /* Top nav component */
 .c-main-nav {
-	background-color: rgba(var(--background), 0.8);
-	backdrop-filter: blur(4px);
+	background-color: rgba(var(--nav-background), 0.8);
+	backdrop-filter: blur(9px);
 	border-radius: 10px;
 }
 

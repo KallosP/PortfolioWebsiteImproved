@@ -4,10 +4,10 @@ import closeIcon from '../assets/svg-icons/close.svg'
 
 function Navbar() {
 	return (
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light mx-3 my-3 c-main-nav">
-			<div class="container-fluid justify-content-center">
+		<nav className="navbar fixed-top navbar-expand-lg navbar-light mx-3 my-3 c-main-nav">
+			<div className="container-fluid justify-content-center">
 				<button
-					class="navbar-toggler"
+					className="navbar-toggler"
 					type="button"
 					data-bs-toggle="collapse"
 					data-bs-target="#navbarNav"
@@ -16,30 +16,30 @@ function Navbar() {
 					aria-label="Toggle navigation">
 					<img src={closeIcon} alt="Close" />
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav align-items-center">
-						<li class="nav-item first-li">
-							<a class="nav-link" aria-current="page" href="#">
+				<div className="collapse navbar-collapse" id="navbarNav">
+					<ul className="navbar-nav align-items-center">
+						<li className="nav-item first-li">
+							<a className="nav-link" aria-current="page" href="#">
 								Home
 							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
+						<li className="nav-item">
+							<a className="nav-link" href="#">
 								Projects
 							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
+						<li className="nav-item">
+							<a className="nav-link" href="#">
 								Skills
 							</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
+						<li className="nav-item">
+							<a className="nav-link" href="#">
 								Education
 							</a>
 						</li>
-						<li class="nav-item last-li">
-							<a class="nav-link" href="#">
+						<li className="nav-item last-li">
+							<a className="nav-link" href="#">
 								Contact
 							</a>
 						</li>

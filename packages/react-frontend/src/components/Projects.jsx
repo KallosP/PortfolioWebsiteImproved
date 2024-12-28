@@ -2,8 +2,8 @@
 
 function Projects() {
 	return (
-		<div class="container-fluid">
-			<h1 class="text-center">Projects</h1>
+		<div className="container-fluid">
+			<h1 className="text-center">Projects</h1>
 		</div>
 	)
 }
