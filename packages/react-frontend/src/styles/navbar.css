@@ -35,7 +35,7 @@
 
 /* Links */
 .nav-link {
-	color: var(--description-text);
+	color: var(--description-text) !important;
 }
 
 .first-li {

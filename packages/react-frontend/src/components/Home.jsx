@@ -1,12 +1,13 @@
-//import React from 'react'
+import '../styles/home.css'
 
 function Home() {
 	return (
-		<div class="container-fluid">
-			<h2 class="text-center">My Name is Peter Kallos</h2>
+		<div class="container-fluid c-home">
+			<h2 class="text-center">Peter Kallos</h2>
 			<p class="text-center">
-				an undergraduate computer science student with a passion for software and all things
-				technology
+				I'm a fourth-year Computer Science student at Cal Poly, San Luis Obispo, with a strong
+				interest in full-stack development and a particular focus on mobile apps. Explore my work
+				and learn more about me below.
 			</p>
 			<ul class="list-unstyled text-center">
 				<li class="d-inline-block mx-2">
