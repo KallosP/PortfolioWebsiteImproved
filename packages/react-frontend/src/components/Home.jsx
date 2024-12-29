@@ -1,4 +1,7 @@
 import styles from '../styles/home.module.css'
+import linkedInIcon from '../assets/svg-icons/linkedIn_button.svg'
+import gitHubIcon from '../assets/svg-icons/GitHub_Button.svg'
+import emailIcon from '../assets/svg-icons/Email_Button.svg'
 
 function Home() {
 	const fluidContainerDivClasses = [
@@ -6,43 +9,57 @@ function Home() {
 		'd-flex',
 		'flex-column',
 		'px-5',
-		'border',
+		'text-start',
 		'align-items-start',
 		styles['c-div-content']
 	].join(' ')
-	const h2Classes = ['text-center', 'text-secondary'].join(' ')
-	const pClasses = ['text-center', 'text-secondary', styles['c-home-p']].join(' ')
-	const ulClasses = ['list-unstyled', 'text-center'].join(' ')
-	const liClasses = ['d-inline-block', 'mx-2'].join(' ')
-	const buttonClasses = ['btn', 'btn-primary'].join(' ')
+	const h1Classes = ['text-secondary', 'row', styles['c-h1']].join(' ')
+	const divContainerForText = ['text-secondary', 'row', 'mb-2'].join(' ')
+	const ulClasses = ['list-unstyled', 'row', 'mb-4'].join(' ')
+	const liClasses = ['col'].join(' ')
+	const firstLiClasses = [liClasses, 'ps-0'].join(' ')
+	const buttonClasses = ['btn', 'enable-shadow', 'btn-primary', 'row', styles['c-btn']].join(' ')
+	const pClasses = ['ps-0', styles['c-p']].join(' ')
+	const strongClasses = ['text-primary'].join(' ')
+	const imageButtonClasses = ['btn', styles['c-img-btn']].join(' ')
+	const imgClasses = [styles['c-image']].join(' ')
 
 	return (
 		<div class={fluidContainerDivClasses}>
-			<h2 class={h2Classes}>Peter Kallos</h2>
-			<p class={pClasses}>
-				I'm a fourth-year Computer Science student at Cal Poly, San Luis Obispo, with a strong
-				interest in full-stack development and a particular focus on mobile apps. Explore my work
-				and learn more about me below.
-			</p>
+			<h1 class={h1Classes}>Peter Kallos</h1>
+			<div class={divContainerForText}>
+				<p className={pClasses}>
+					I'm a fourth-year Computer Science student at Cal Poly, San Luis Obispo, with a strong
+					interest in <strong className={strongClasses}>full-stack development</strong> and a
+					particular focus on <strong className={strongClasses}>mobile apps</strong>. Explore my
+					work and learn more about me below.
+				</p>
+			</div>
 			<ul class={ulClasses}>
-				<li class={liClasses}>
+				<li class={firstLiClasses}>
 					<a href="https://github.com/KallosP" target="_blank">
-						<button>GitHub</button>
+						<button type="button" className={imageButtonClasses}>
+							<img src={gitHubIcon} alt="LinkedIn" className={imgClasses} />
+						</button>
 					</a>
 				</li>
 				<li className={liClasses}>
 					<a href="https://www.linkedin.com/in/peter-kallos/" target="_blank">
-						<button>LinkedIn</button>
+						<button type="button" className={imageButtonClasses}>
+							<img src={linkedInIcon} alt="LinkedIn" className={imgClasses} />
+						</button>
 					</a>
 				</li>
 				<li className={liClasses}>
 					<a href="mailto:pkallos19@gmail.com">
-						<button>Email</button>
+						<button type="button" className={imageButtonClasses}>
+							<img src={emailIcon} alt="LinkedIn" className={imgClasses} />
+						</button>
 					</a>
 				</li>
 			</ul>
 			<button type="button" class={buttonClasses}>
-				Base class
+				Download Resume
 			</button>
 		</div>
 	)

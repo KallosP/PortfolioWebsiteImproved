@@ -3,9 +3,13 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
-$primary: #00dc8d;
+$primary: #00ffa2;
 $secondary: #fff;
 $body-bg: #20242D;
+
+// Button
+$btn-border-radius: 100px;
+$btn-font-weight: 625;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
