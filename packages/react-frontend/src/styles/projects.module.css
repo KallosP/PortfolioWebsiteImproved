@@ -20,13 +20,14 @@
 	background-color: var(--card-bg-color);
 	border-radius: 20px;
 	height: 100%;
-	padding: 26px;
+	padding: 46px;
 }
 
 /* Project Info (parent of header, description, and Learn More button) */
 .c-project-info {
 	padding: 0;
 	justify-items: center;
+	width: 70vw;
 }
 
 /* Project Header (parent of app icon img, project title, project type) */
@@ -97,7 +98,7 @@
 
 .c-mobile-image {
 	margin-top: 15px;
-	height: 450px;
+	height: 400px;
 	box-shadow: 0 0 5px var(--shadow-color);
 	border-radius: 20px;
 }
@@ -113,13 +114,15 @@
 /* Previous button for carousel */
 .c-carousel-control-prev {
 	width: 30px;
-	margin-left: 10px;
+	margin: 20px 0px 0px 20px;
+	align-self: flex-start;
 }
 
 /* Next button for carousel */
 .c-carousel-control-next {
 	width: 30px;
-	margin-right: 10px;
+	margin: 20px 20px 0px 0px;
+	align-self: flex-start;
 }
 
 /* min-width 500px represents non-mobile (e.g. tablet, laptop, desktop) */
@@ -134,8 +137,30 @@
 	}
 }
 
+@media (min-width: 770px) {
+	.c-carousel-inner {
+		padding-left: 5rem !important;
+		padding-right: 5rem !important;
+	}
+	.c-carousel-control-prev {
+		margin: 20px 0px 0px 6rem;
+	}
+
+	/* Next button for carousel */
+	.c-carousel-control-next {
+		margin: 20px 6rem 0px 0px;
+	}
+
+	.c-project-info {
+		width: 50vw;
+	}
+}
+
+@media (min-width: 900px) {
+}
+
 /* represents desktop/larger monitors */
-@media (min-width: 960px), (min-width: 992px) {
+@media (min-width: 1270px) {
 	.c-carousel-inner {
 		padding-left: 3rem !important;
 		padding-right: 3rem !important;
@@ -157,8 +182,8 @@
 		justify-items: start;
 		justify-self: start !important;
 		align-content: center !important;
-		margin: 0; 
-		width: 50%;
+		margin: 0;
+		width: 50% !important;
 	}
 
 	/* App icon img */
@@ -203,19 +228,21 @@
 		height: 380px;
 	}
 
-    .c-web-image {
-        margin-left: auto;
-        width: 45%;
-        object-fit: contain; 
-    }
+	.c-web-image {
+		margin-left: auto;
+		width: 45%;
+		object-fit: contain;
+	}
 
 	/* Previous button for carousel */
 	.c-carousel-control-prev {
 		margin-left: 80px;
+		align-self: center;
 	}
 
 	/* Next button for carousel */
 	.c-carousel-control-next {
 		margin-right: 80px;
+		align-self: center;
 	}
 }
