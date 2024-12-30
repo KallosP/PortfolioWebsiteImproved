@@ -2,9 +2,13 @@
 import styles from '../styles/projects.module.css'
 import ctwIcon from '../assets/svg-icons/CTW_Logo.svg'
 import avcIcon from '../assets/svg-icons/avc-logo.svg'
+import sweetNoteIcon from '../assets/svg-icons/sweet-note-logo.svg'
+import taskManagerIcon from '../assets/svg-icons/api-logo.svg'
 import checkMarkCircleIcon from '../assets/svg-icons/check-mark-circle.svg'
 import ctwPhoneImage from '../assets/svg-icons/ctw-phone-image.svg'
 import avcPhoneImage from '../assets/svg-icons/avc-phone-image.svg'
+import sweetNoteImage from '../assets/images/sweet-note.png'
+import taskManagerImage from '../assets/images/task-manager.png'
 
 function Projects() {
 	const fluidContainerDivClasses = [
@@ -18,7 +22,7 @@ function Projects() {
 	const carouselDivClasses = ['carousel', 'slide', 'carousel-fade', styles['c-carousel-div']].join(
 		' '
 	)
-	const carouselInnerClasses = ['carousel-inner', 'px-5', styles['c-carousel-inner']].join(' ')
+	const carouselInnerClasses = ['carousel-inner', styles['c-carousel-inner']].join(' ')
 	const carouselItemClasses = ['carousel-item', styles['c-carousel-item']].join(' ')
 	const carouselItemActiveClasses = [
 		carouselItemClasses,
@@ -53,6 +57,7 @@ function Projects() {
 	const published = ['text-primary']
 	const checkMarkCircle = [styles['c-check-mark-circle']]
 	const mobileImageClasses = [styles['c-mobile-image']].join(' ')
+	const webImageClasses = [styles['c-web-image']].join(' ')
 
 	return (
 		<div className={fluidContainerDivClasses}>
@@ -62,7 +67,7 @@ function Projects() {
 			<div id="carouselExample" className={carouselDivClasses}>
 				<div className={carouselInnerClasses}>
 					{/* CTW */}
-					<div className={carouselItemActiveClasses}>
+					<div className={carouselItemClasses}>
 						<div className={projectInfoClasses}>
 							<div className={projectHeaderClasses}>
 								<img src={ctwIcon} className={iconImgClasses} alt="CTW Icon" />
@@ -106,6 +111,47 @@ function Projects() {
 							<button className={learnMoreButtonClasses}>View Project</button>
 						</div>
 						<img src={avcPhoneImage} className={mobileImageClasses} alt="AVC Mobile Image" />
+					</div>
+					{/* SWEet Note */}
+					<div className={carouselItemActiveClasses}>
+						<div className={projectInfoClasses}>
+							<div className={projectHeaderClasses}>
+								<img src={sweetNoteIcon} className={iconImgClasses} alt="SWEet Note Icon" />
+								<div className={projectTitleAndTypeClasses}>
+									<h4 className={projectTitleClasses}>SWEet Note</h4>
+									<h5 className={projectTypeClasses}>Web App</h5>
+								</div>
+							</div>
+							<p className={pClasses}>
+								A simple note-taking app designed for quickly organizing notes and daily tasks.
+								Includes custom group creation and a user-friendly interface for seamless
+								productivity.
+							</p>
+							<button className={learnMoreButtonClasses}>View Project</button>
+						</div>
+						<img src={sweetNoteImage} className={webImageClasses} alt="SWEet Note Web Image" />
+					</div>
+					{/* Task Manager API */}
+					<div className={carouselItemActiveClasses}>
+						<div className={projectInfoClasses}>
+							<div className={projectHeaderClasses}>
+								<img src={taskManagerIcon} className={iconImgClasses} alt="Task Manager API Icon" />
+								<div className={projectTitleAndTypeClasses}>
+									<h4 className={projectTitleClasses}>Task Manager</h4>
+									<h5 className={projectTypeClasses}>API</h5>
+								</div>
+							</div>
+							<p className={pClasses}>
+								A RESTful API designed for personalized task management. Allows users to efficiently
+								track, view, and modify their tasks with intuitive endpoints.
+							</p>
+							<button className={learnMoreButtonClasses}>View Project</button>
+						</div>
+						<img
+							src={taskManagerImage}
+							className={webImageClasses}
+							alt="Task Manager API Web Image"
+						/>
 					</div>
 				</div>
 				<button

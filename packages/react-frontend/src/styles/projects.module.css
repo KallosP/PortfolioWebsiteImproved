@@ -8,6 +8,11 @@
 	margin-top: 30px;
 }
 
+.c-carousel-inner {
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
 /* Carousel card - START */
 /* Outermost container for carousel card */
 .c-carousel-item {
@@ -78,8 +83,8 @@
 	background-color: transparent;
 	border: 2px solid var(--primary);
 	color: var(--primary);
-    transition: all 0.2s ease-in-out;
-    transform: scale(1);
+	transition: all 0.2s ease-in-out;
+	transform: scale(1);
 }
 
 .c-learn-more-btn:hover {
@@ -87,7 +92,7 @@
 	border: 2px solid var(--primary);
 	color: var(--card-bg-color);
 	box-shadow: 0 0 10px var(--primary);
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .c-mobile-image {
@@ -95,6 +100,12 @@
 	height: 450px;
 	box-shadow: 0 0 5px var(--shadow-color);
 	border-radius: 20px;
+}
+
+.c-web-image {
+	margin-top: 15px;
+	width: 100%;
+	border-radius: 10px;
 }
 
 /* Crousel card - END */
@@ -125,6 +136,11 @@
 
 /* represents desktop/larger monitors */
 @media (min-width: 960px), (min-width: 992px) {
+	.c-carousel-inner {
+		padding-left: 3rem !important;
+		padding-right: 3rem !important;
+	}
+
 	.c-carousel-div {
 		justify-self: center;
 		padding-left: 7vw;
@@ -133,16 +149,16 @@
 	.c-carousel-item {
 		display: flex !important;
 		justify-items: start !important;
-        padding-left: 60px;
-        padding-right: 60px;
+		padding-left: 60px;
+		padding-right: 60px;
 	}
 	.c-project-info {
 		padding: 0;
 		justify-items: start;
 		justify-self: start !important;
 		align-content: center !important;
-		margin: 0;
-		width: 60%;
+		margin: 0; 
+		width: 50%;
 	}
 
 	/* App icon img */
@@ -172,19 +188,25 @@
 	}
 
 	.c-p {
-        margin-top: 20px;
+		margin-top: 20px;
 		font-size: 20px;
 	}
 
 	.c-learn-more-btn {
-        margin-top: 10px;
+		margin-top: 10px;
 		font-size: 20px;
 	}
 
-    .c-mobile-image {
-        margin-right: auto;
+	.c-mobile-image {
+		margin-right: auto;
+		margin-left: auto;
+		height: 380px;
+	}
+
+    .c-web-image {
         margin-left: auto;
-        height: 380px;
+        width: 45%;
+        object-fit: contain; 
     }
 
 	/* Previous button for carousel */
