@@ -5,6 +5,7 @@
 .c-carousel-div {
 	display: flex;
 	height: auto;
+	margin-top: 30px;
 }
 
 /* Carousel card - START */
@@ -14,7 +15,7 @@
 	background-color: var(--card-bg-color);
 	border-radius: 20px;
 	height: 100%;
-	padding: 20px;
+	padding: 26px;
 }
 
 /* Project Info (parent of header, description, and Learn More button) */
@@ -77,6 +78,8 @@
 	background-color: transparent;
 	border: 2px solid var(--primary);
 	color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    transform: scale(1);
 }
 
 .c-learn-more-btn:hover {
@@ -84,6 +87,7 @@
 	border: 2px solid var(--primary);
 	color: var(--card-bg-color);
 	box-shadow: 0 0 10px var(--primary);
+    transform: scale(1.05);
 }
 
 .c-mobile-image {
@@ -120,5 +124,76 @@
 }
 
 /* represents desktop/larger monitors */
-@media (min-width: 992px) {
+@media (min-width: 960px), (min-width: 992px) {
+	.c-carousel-div {
+		justify-self: center;
+		padding-left: 7vw;
+		padding-right: 7vw;
+	}
+	.c-carousel-item {
+		display: flex !important;
+		justify-items: start !important;
+        padding-left: 60px;
+        padding-right: 60px;
+	}
+	.c-project-info {
+		padding: 0;
+		justify-items: start;
+		justify-self: start !important;
+		align-content: center !important;
+		margin: 0;
+		width: 60%;
+	}
+
+	/* App icon img */
+	.c-icon-img {
+		height: 100px;
+		width: 100px;
+	}
+
+	.c-project-title-and-type {
+		margin-top: 8px;
+		justify-items: start;
+	}
+
+	.c-project-title {
+		font-size: 34px;
+		margin-bottom: 0px;
+	}
+
+	.c-project-type {
+		font-size: 20px;
+		margin-top: 4px !important;
+	}
+
+	.c-check-mark-circle {
+		height: 20px;
+		width: 20px;
+	}
+
+	.c-p {
+        margin-top: 20px;
+		font-size: 20px;
+	}
+
+	.c-learn-more-btn {
+        margin-top: 10px;
+		font-size: 20px;
+	}
+
+    .c-mobile-image {
+        margin-right: auto;
+        margin-left: auto;
+        height: 380px;
+    }
+
+	/* Previous button for carousel */
+	.c-carousel-control-prev {
+		margin-left: 80px;
+	}
+
+	/* Next button for carousel */
+	.c-carousel-control-next {
+		margin-right: 80px;
+	}
 }
