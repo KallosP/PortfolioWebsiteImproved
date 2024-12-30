@@ -58,9 +58,11 @@ function Home() {
 					</a>
 				</li>
 			</ul>
-			<button type="button" class={buttonClasses}>
-				Download Resume
-			</button>
+			<a href="../../public/Peter_Kallos_Resume.pdf" download="Peter_Kallos_Resume.pdf"> 
+				<button type="button" class={buttonClasses}>
+					Download Resume
+				</button>
+			</a>
 		</div>
 	)
 }
