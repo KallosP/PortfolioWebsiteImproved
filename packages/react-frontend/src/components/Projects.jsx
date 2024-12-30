@@ -67,7 +67,7 @@ function Projects() {
 			<div id="carouselExample" className={carouselDivClasses}>
 				<div className={carouselInnerClasses}>
 					{/* CTW */}
-					<div className={carouselItemClasses}>
+					<div className={carouselItemActiveClasses}>
 						<div className={projectInfoClasses}>
 							<div className={projectHeaderClasses}>
 								<img src={ctwIcon} className={iconImgClasses} alt="CTW Icon" />
@@ -113,7 +113,7 @@ function Projects() {
 						<img src={avcPhoneImage} className={mobileImageClasses} alt="AVC Mobile Image" />
 					</div>
 					{/* SWEet Note */}
-					<div className={carouselItemActiveClasses}>
+					<div className={carouselItemClasses}>
 						<div className={projectInfoClasses}>
 							<div className={projectHeaderClasses}>
 								<img src={sweetNoteIcon} className={iconImgClasses} alt="SWEet Note Icon" />
@@ -132,7 +132,7 @@ function Projects() {
 						<img src={sweetNoteImage} className={webImageClasses} alt="SWEet Note Web Image" />
 					</div>
 					{/* Task Manager API */}
-					<div className={carouselItemActiveClasses}>
+					<div className={carouselItemClasses}>
 						<div className={projectInfoClasses}>
 							<div className={projectHeaderClasses}>
 								<img src={taskManagerIcon} className={iconImgClasses} alt="Task Manager API Icon" />
