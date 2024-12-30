@@ -1,8 +1,10 @@
 //import React from 'react'
 import styles from '../styles/projects.module.css'
 import ctwIcon from '../assets/svg-icons/CTW_Logo.svg'
+import avcIcon from '../assets/svg-icons/avc-logo.svg'
 import checkMarkCircleIcon from '../assets/svg-icons/check-mark-circle.svg'
 import ctwPhoneImage from '../assets/svg-icons/ctw-phone-image.svg'
+import avcPhoneImage from '../assets/svg-icons/avc-phone-image.svg'
 
 function Projects() {
 	const fluidContainerDivClasses = [
@@ -91,29 +93,19 @@ function Projects() {
 					<div className={carouselItemClasses}>
 						<div className={projectInfoClasses}>
 							<div className={projectHeaderClasses}>
-								<img src={ctwIcon} className={iconImgClasses} alt="CTW Icon" />
+								<img src={avcIcon} className={iconImgClasses} alt="AVC Icon" />
 								<div className={projectTitleAndTypeClasses}>
 									<h4 className={projectTitleClasses}>Interactive Campus Map</h4>
-									<h5 className={projectTypeClasses}>
-										Mobile App <span className={bullet}></span>{' '}
-										<span className={published}>
-											Published
-											<img
-												src={checkMarkCircleIcon}
-												className={checkMarkCircle}
-												alt="Checkmark Circle"
-											/>
-										</span>
-									</h5>
+									<h5 className={projectTypeClasses}>Mobile App</h5>
 								</div>
 							</div>
 							<p className={pClasses}>
-								A traffic app that provides real-time traffic data for California highways including
-								live CCTV feeds, incident reports, closures, and chain control information.
+								A location-based interactive map built to navigate students and faculty around
+								Antelope Valley College's campus.
 							</p>
 							<button className={learnMoreButtonClasses}>View Project</button>
 						</div>
-						<img src={ctwPhoneImage} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={avcPhoneImage} className={mobileImageClasses} alt="AVC Mobile Image" />
 					</div>
 				</div>
 				<button
