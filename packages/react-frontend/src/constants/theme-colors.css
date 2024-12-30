@@ -1,7 +1,10 @@
 :root {
-	--background: #20242D;
+	--background: #20242d;
 	--nav-background: 22, 25, 31;
 	--primary: #00ffa2;
+	--secondary: #fff;
 	--title-text: 255, 255, 255;
 	--description-text: #c0c0c0;
+	--card-bg-color: #353c4a;
+	--shadow-color: #000;
 }

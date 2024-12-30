@@ -1,0 +1,124 @@
+@import url('../constants/theme-colors.css');
+
+/* CAROUSEL */
+/* Outermost carousel container */
+.c-carousel-div {
+	display: flex;
+	height: auto;
+}
+
+/* Carousel card - START */
+/* Outermost container for carousel card */
+.c-carousel-item {
+	justify-items: center;
+	background-color: var(--card-bg-color);
+	border-radius: 20px;
+	height: 100%;
+	padding: 20px;
+}
+
+/* Project Info (parent of header, description, and Learn More button) */
+.c-project-info {
+	padding: 0;
+	justify-items: center;
+}
+
+/* Project Header (parent of app icon img, project title, project type) */
+.c-project-header {
+	justify-items: center;
+	margin-bottom: 16px;
+}
+
+/* App icon img */
+.c-icon-img {
+	height: 60px;
+	width: 60px;
+	margin-right: 15px;
+}
+
+.c-project-title-and-type {
+	margin-top: 8px;
+	justify-items: center;
+}
+
+.c-project-title {
+	margin-bottom: 0px;
+}
+
+.c-project-type {
+	font-size: 14px;
+	margin-top: 4px !important;
+}
+
+.c-bullet {
+	width: 6px;
+	height: 6px;
+	background-color: var(--secondary); /* Adjust color */
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 6px; /* Space around the bullet */
+	position: relative;
+	bottom: 1px;
+}
+
+.c-check-mark-circle {
+	height: 15px;
+	width: 15px;
+	margin-left: 5px;
+	position: relative;
+	bottom: 2px;
+}
+
+.c-p {
+	font-size: 16px;
+}
+
+.c-learn-more-btn {
+	background-color: transparent;
+	border: 2px solid var(--primary);
+	color: var(--primary);
+}
+
+.c-learn-more-btn:hover {
+	background-color: var(--primary);
+	border: 2px solid var(--primary);
+	color: var(--card-bg-color);
+	box-shadow: 0 0 10px var(--primary);
+}
+
+.c-mobile-image {
+	margin-top: 15px;
+	height: 450px;
+	box-shadow: 0 0 5px var(--shadow-color);
+	border-radius: 20px;
+}
+
+/* Crousel card - END */
+
+/* Previous button for carousel */
+.c-carousel-control-prev {
+	width: 30px;
+	margin-left: 10px;
+}
+
+/* Next button for carousel */
+.c-carousel-control-next {
+	width: 30px;
+	margin-right: 10px;
+}
+
+/* min-width 500px represents non-mobile (e.g. tablet, laptop, desktop) */
+@media (min-width: 500px), (min-width: 992px) {
+	.c-project-header {
+		display: flex;
+		align-items: center;
+	}
+	.c-project-title-and-type {
+		margin-top: 0px;
+		justify-items: flex-start;
+	}
+}
+
+/* represents desktop/larger monitors */
+@media (min-width: 992px) {
+}
