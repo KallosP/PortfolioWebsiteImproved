@@ -21,6 +21,10 @@
 	resize: none;
 }
 
+.c-input:focus {
+	box-shadow: none;
+}
+
 .c-input::placeholder {
 	color: var(--secondary) !important;
 }
