@@ -9,6 +9,8 @@ import ctwPhoneImage from '../assets/svg-icons/ctw-phone-image.svg'
 import avcPhoneImage from '../assets/svg-icons/avc-phone-image.svg'
 import sweetNoteImage from '../assets/images/sweet-note.png'
 import taskManagerImage from '../assets/images/task-manager.png'
+import nextArrowIcon from '../assets/svg-icons/next-arrow.svg'
+import prevArrowIcon from '../assets/svg-icons/prev-arrow.svg'
 
 function Projects() {
 	const fluidContainerDivClasses = [
@@ -37,8 +39,6 @@ function Projects() {
 		'carousel-control-next',
 		styles['c-carousel-control-next']
 	].join(' ')
-	const carouselControlPrevIconClasses = ['carousel-control-prev-icon'].join(' ')
-	const carouselControlNextIconClasses = ['carousel-control-next-icon'].join(' ')
 	const visuallyHiddenClasses = ['visually-hidden'].join(' ')
 	const pClasses = ['text-secondary', styles['c-p']].join(' ')
 	const projectInfoClasses = ['container-fluid', styles['c-project-info']].join(' ')
@@ -48,6 +48,7 @@ function Projects() {
 		'btn-primary',
 		styles['c-learn-more-btn']
 	].join(' ')
+	const arrowClasses = [styles['c-arrow']].join(' ')
 	const projectHeaderClasses = [styles['c-project-header']].join(' ')
 	const projectTitleAndTypeClasses = [styles['c-project-title-and-type']].join(' ')
 	const projectTitleClasses = ['text-secondary', styles['c-project-title']].join(' ')
@@ -159,7 +160,7 @@ function Projects() {
 					type="button"
 					data-bs-target="#carouselExample"
 					data-bs-slide="prev">
-					<span className={carouselControlPrevIconClasses} aria-hidden="true"></span>
+					<img src={prevArrowIcon} aria-hidden="true" alt="Previous" />
 					<span className={visuallyHiddenClasses}>Previous</span>
 				</button>
 				<button
@@ -167,7 +168,7 @@ function Projects() {
 					type="button"
 					data-bs-target="#carouselExample"
 					data-bs-slide="next">
-					<span className={carouselControlNextIconClasses} aria-hidden="true"></span>
+					<img src={nextArrowIcon} aria-hidden="true" alt="Next" className={arrowClasses} />
 					<span className={visuallyHiddenClasses}>Next</span>
 				</button>
 			</div>

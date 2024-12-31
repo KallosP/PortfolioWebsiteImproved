@@ -142,7 +142,6 @@
 	.c-icon-img {
 		margin-right: 15px;
 	}
-
 }
 
 @media (min-height: 750px) {
@@ -194,7 +193,7 @@
 }
 
 /* represents desktop/larger monitors */
-@media (min-width: 1270px)  {
+@media (min-width: 1270px) {
 	.c-carousel-inner {
 		padding-left: 3rem !important;
 		padding-right: 3rem !important;
