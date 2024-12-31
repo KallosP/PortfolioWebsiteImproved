@@ -1,0 +1,45 @@
+@import url('../constants/theme-colors.css');
+
+.c-fluid-container {
+	margin-top: 30px;
+	padding-right: 10vw !important;
+	padding-left: 10vw !important;
+	justify-items: center !important;
+}
+
+.c-email-container {
+	margin-top: 40px;
+}
+
+.c-input {
+	height: inherit !important;
+	width: 70vw;
+	background-color: var(--card-bg-color) !important;
+	color: var(--secondary) !important;
+	padding: 20px;
+	border: 0;
+	resize: none;
+}
+
+.c-input::placeholder {
+	color: var(--secondary) !important;
+}
+
+.c-text-area {
+	height: 30vh !important;	
+}
+
+/* Resume Button */
+.c-btn {
+	border-radius: 100px;
+  	box-shadow: 0 0 8px var(--primary);
+	font-size: 20px;
+	transition: all 0.2s ease-in-out;
+	margin-top: 15px;
+	margin-bottom: 40px;
+}
+
+.c-btn:hover {
+	box-shadow: 0 0 10px var(--primary);
+	transform: scale(1.05);
+}
