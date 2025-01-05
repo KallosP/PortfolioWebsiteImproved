@@ -1,18 +1,15 @@
 // src/MyApp.jsx
 //import React from 'react'
-import Navbar from './components/Navbar'
+import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
+import CTW from './components/project-pages/CTW'
 
 function MyApp() {
 	return (
-		<>
-			<Navbar />
-			<Home />
-			<Projects />
-			<Contact />
-		</>
+		<Routes>
+			<Route path="/" element={<Home />} />
+			<Route path="california-traffic-watch" element={<CTW />} />
+		</Routes>
 	)
 }
 export default MyApp

@@ -12,6 +12,8 @@ import taskManagerImage from '../assets/images/task-manager.png'
 import nextArrowIcon from '../assets/svg-icons/next-arrow.svg'
 import prevArrowIcon from '../assets/svg-icons/prev-arrow.svg'
 
+import { Link } from 'react-router-dom'
+
 function Projects() {
 	const fluidContainerDivClasses = [
 		'container-fluid',
@@ -91,7 +93,11 @@ function Projects() {
 								A traffic app that provides real-time traffic data for California highways including
 								live CCTV feeds, incident reports, closures, and chain control information.
 							</p>
-							<button className={learnMoreButtonClasses}>View Project</button>
+							<Link to="california-traffic-watch">
+								<button className={learnMoreButtonClasses}>
+									View Project
+								</button>
+							</Link>
 						</div>
 						<img src={ctwPhoneImage} className={mobileImageClasses} alt="CTW Mobile Image" />
 					</div>
