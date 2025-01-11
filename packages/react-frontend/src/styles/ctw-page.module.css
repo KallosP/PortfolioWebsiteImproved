@@ -1,5 +1,49 @@
-.c-fluid-container {
+@import url('../constants/theme-colors.css');
+
+.c-info-container {
+	height: 1000px;
+}
+
+.c-back-button-container {
+	display: flex;
+	border-radius: 40px;
+	height: auto;
+	background-color: rgba(var(--nav-background), 0.8);
+	backdrop-filter: blur(9px);
+	justify-self: center;
+	justify-content: center;
+	align-items: center;
+	padding: 7px 8px 7px 8px;
 }
 
 .c-back-button {
+	text-decoration: none;
+	border: 1px solid var(--description-text);
+	border-radius: 20px;
+	border-color: var(--description-text);
+	color: var(--description-text);
+	padding: 5px 15px 5px 15px;
+	margin: 0px 2px 0px 2px;
+	transition:
+		border-color 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.c-back-button:hover {
+	border-color: rgb(var(--title-text));
+	background-color: rgba(var(--title-text), 0.1);
+}
+
+.c-header-image-container {
+	height: 200px;
+	background-color: #50fbb3;
+	border: 1px solid red;
+}
+
+.c-header-image {
+	height: 80%;
+	max-width: 100%;
+	display: block;
+	margin: auto;
+	object-fit: cover;
 }
