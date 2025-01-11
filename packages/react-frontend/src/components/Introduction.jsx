@@ -39,21 +39,21 @@ function Introduction() {
 				<li class={firstLiClasses}>
 					<a href="https://github.com/KallosP" target="_blank">
 						<button type="button" className={imageButtonClasses}>
-							<img src={gitHubIcon} alt="LinkedIn" className={imgClasses} />
+							<img src={gitHubIcon} alt="GitHubIcon" className={imgClasses} />
 						</button>
 					</a>
 				</li>
 				<li className={liClasses}>
 					<a href="https://www.linkedin.com/in/peter-kallos/" target="_blank">
 						<button type="button" className={imageButtonClasses}>
-							<img src={linkedInIcon} alt="LinkedIn" className={imgClasses} />
+							<img src={linkedInIcon} alt="LinkedInIcon" className={imgClasses} />
 						</button>
 					</a>
 				</li>
 				<li className={liClasses}>
 					<a href="mailto:pkallos19@gmail.com">
 						<button type="button" className={imageButtonClasses}>
-							<img src={emailIcon} alt="LinkedIn" className={imgClasses} />
+							<img src={emailIcon} alt="EmailIcon" className={imgClasses} />
 						</button>
 					</a>
 				</li>

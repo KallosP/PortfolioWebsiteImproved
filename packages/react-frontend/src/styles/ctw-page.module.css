@@ -1,9 +1,15 @@
 @import url('../constants/theme-colors.css');
 
-.c-info-container {
-	height: 1000px;
+/* Header Image */
+.c-header-image {
+	height: 80%;
+	max-width: 100%;
+	display: block;
+	margin: auto;
+	object-fit: cover;
 }
 
+/* Back Button */
 .c-back-button-container {
 	display: flex;
 	border-radius: 40px;
@@ -37,13 +43,62 @@
 .c-header-image-container {
 	height: 200px;
 	background-color: #50fbb3;
-	border: 1px solid red;
 }
 
-.c-header-image {
-	height: 80%;
-	max-width: 100%;
-	display: block;
-	margin: auto;
-	object-fit: cover;
+/* Project Info */
+.c-info-container {
+    text-align: left;
+    padding: 25px;
+}
+
+.c-learn-more-btn {
+    display: flex;
+    align-items: center;
+	background-color: transparent;
+	border: 2px solid var(--primary);
+	color: var(--primary);
+	transition: all 0.2s ease-in-out;
+	transform: scale(1);
+}
+
+.c-learn-more-btn:hover {
+	background-color: var(--primary);
+	border: 2px solid var(--primary);
+	color: var(--card-bg-color);
+	box-shadow: 0 0 10px var(--primary);
+	transform: scale(1.05);
+}
+/* Icon/Link Buttons */
+.c-img-btn {
+	padding: 0;
+  	transition: transform 0.3s ease; /* Smooth transition */	
+}
+
+.c-img-btn:hover {
+	transform: rotate(20deg);
+}
+
+.c-image {
+	width: 43px;
+	height: 43px;
+	padding: 0;
+	margin: 0;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+svg path{
+    fill: currentColor;
+}
+
+.c-ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
