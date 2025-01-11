@@ -1,7 +1,13 @@
 import styles from '../../styles/ctw-page.module.css'
-import ctwPhoneImage from '../../assets/svg-icons/ctw-phone-image.svg'
 import CTWGraphic from '../../assets/images/Feature_Graphic.png'
 import gitHubIcon from '../../assets/svg-icons/GitHub_Button.svg'
+import ctwImage1 from '../../assets/svg-icons/ctw-images/CTW-Image-1.svg'
+import ctwImage2 from '../../assets/svg-icons/ctw-images/CTW-Image-2.svg'
+import ctwImage3 from '../../assets/svg-icons/ctw-images/CTW-Image-3.svg'
+import ctwImage4 from '../../assets/svg-icons/ctw-images/CTW-Image-4.svg'
+import ctwImage5 from '../../assets/svg-icons/ctw-images/CTW-Image-5.svg'
+import ctwImage6 from '../../assets/svg-icons/ctw-images/CTW-Image-6.svg'
+import ctwImage7 from '../../assets/svg-icons/ctw-images/CTW-Image-7.svg'
 import nextArrowIcon from '../../assets/svg-icons/next-arrow.svg'
 import prevArrowIcon from '../../assets/svg-icons/prev-arrow.svg'
 import { Link } from 'react-router-dom'
@@ -23,6 +29,7 @@ function ProjectPage() {
 	const headerImageClasses = [styles['c-header-image']].join(' ')
 	const infoContainerClasses = ['row', styles['c-info-container']].join(' ')
 	const h1Classes = ['text-secondary', styles['c-h1']].join(' ')
+	const h2Classes = ['text-secondary', 'mt-3', styles['c-h2']].join(' ')
 	const buttonContainer = ['row', styles['c-button-container']].join(' ')
 	const learnMoreButtonClasses = [
 		'col',
@@ -35,29 +42,16 @@ function ProjectPage() {
 	const imgClasses = [styles['c-image']].join(' ')
 	const ulClasses = ['list-unstyled', 'mb-2', 'mt-2', styles['c-ul']].join(' ')
 	const liClasses = ['me-2'].join(' ')
-	const carouselDivClasses = ['carousel', 'slide', 'carousel-fade', styles['c-carousel-div']].join(
-		' '
-	)
-	const carouselInnerClasses = ['carousel-inner', styles['c-carousel-inner']].join(' ')
-	const carouselItemClasses = ['carousel-item', styles['c-carousel-item']].join(' ')
-	const carouselItemActiveClasses = [
-		carouselItemClasses,
-		'active',
-		styles['c-carousel-item-active']
-	].join(' ')
-	const carouselControlPrevClasses = [
-		'carousel-control-prev',
-		styles['c-carousel-control-prev']
-	].join(' ')
-	const carouselControlNextClasses = [
-		'carousel-control-next',
-		styles['c-carousel-control-next']
-	].join(' ')
-	const visuallyHiddenClasses = ['visually-hidden'].join(' ')
-	const arrowClasses = [styles['c-arrow']].join(' ')
-	const mobileImageClasses = [styles['c-mobile-image']].join(' ')
-	const webImageClasses = [styles['c-web-image']].join(' ')
+	const mobileImageClasses = ['col', styles['c-mobile-image']].join(' ')
 	const sectionClasses = [styles['c-section']].join(' ')
+	const otherSectionClasses= ['mt-4', styles['c-section']].join(' ')
+	const screenshotContainerClasses = ['container'].join(' ')
+	const scrollableContainerClasses = [
+		'row',
+		'flex-nowrap',
+		'overflow-auto',
+		styles['c-screenshot-container']
+	].join(' ')
 
 	return (
 		<div className={fluidContainerDivClasses}>
@@ -135,36 +129,43 @@ function ProjectPage() {
 						CHP's Traffic Incident Page.
 					</p>
 				</section>
-				<div id="carouselExample" className={carouselDivClasses}>
-					<div className={carouselInnerClasses}>
-						{/* TODO: figure out how to make carousel work with
-						different screen sizes/displaying different amounts of screenshots
-						per carousel slide */}
-						<div className={carouselItemActiveClasses}>
-							<img src={ctwPhoneImage} className={mobileImageClasses} alt="CTW Mobile Image" />
-							<img src={ctwPhoneImage} className={mobileImageClasses} alt="CTW Mobile Image" />
-							<img src={ctwPhoneImage} className={mobileImageClasses} alt="CTW Mobile Image" />
-						</div>
-						<div className={carouselItemClasses}>test</div>
-						<div className={carouselItemClasses}>other</div>
+				<div className={screenshotContainerClasses}>
+					<div className={scrollableContainerClasses}>
+						<img src={ctwImage1} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={ctwImage2} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={ctwImage3} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={ctwImage4} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={ctwImage5} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={ctwImage6} className={mobileImageClasses} alt="CTW Mobile Image" />
+						<img src={ctwImage7} className={mobileImageClasses} alt="CTW Mobile Image" />
 					</div>
-					<button
-						className={carouselControlPrevClasses}
-						type="button"
-						data-bs-target="#carouselExample"
-						data-bs-slide="prev">
-						<img src={prevArrowIcon} aria-hidden="true" alt="Previous" />
-						<span className={visuallyHiddenClasses}>Previous</span>
-					</button>
-					<button
-						className={carouselControlNextClasses}
-						type="button"
-						data-bs-target="#carouselExample"
-						data-bs-slide="next">
-						<img src={nextArrowIcon} aria-hidden="true" alt="Next" className={arrowClasses} />
-						<span className={visuallyHiddenClasses}>Next</span>
-					</button>
 				</div>
+				<section className={otherSectionClasses}>
+					<h2 className={h2Classes}>Displaying the Data</h2>
+					<p className="text-secondary mb-5">
+						The app fetches thousands of data records from JSON files provided by Caltrans,
+						containing detailed information on closed-circuit television (CCTV) cameras, lane
+						closures, and chain control signs across California's 12 districts. Additionally, it
+						fetches CHP incident data from an XML file, which is converted to JSON. These datasets
+						are processed into custom TypeScript types, allowing easy access to the coordinates of
+						individual traffic items, which are used to render them as map markers.
+					</p>
+					<h2 className={h2Classes}>Mapping, Location, and Storage Features</h2>
+					<p className="text-secondary mb-5">
+						I used the Google Maps SDK and React Native Map Clustering module to set up the
+						interactive map and manage marker clustering. These tools enabled the display of a
+						real-time traffic layer, precise user location tracking, and efficient marker
+						clustering. Additionally, persistent user preferences and theme settings were
+						implemented using AsyncStorage and React's Context API.
+					</p>
+					<h2 className={h2Classes}>Mapping, Location, and Storage Features</h2>
+					<p className="text-secondary">
+						A large issue in development was the slow rendering of thousands of markers. Using React
+						Developer Tools to profile the app provided valuable insights, which led me to using
+						component memoization. This optimization effectively reduced unnecessary re-renders,
+						significantly improving the efficiency of marker rendering.
+					</p>
+				</section>
 			</div>
 		</div>
 	)

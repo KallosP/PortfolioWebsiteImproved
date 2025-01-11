@@ -47,13 +47,13 @@
 
 /* Project Info */
 .c-info-container {
-    text-align: left;
-    padding: 25px 0px 25px 0px;
+	text-align: left;
+	padding: 25px 0px 25px 0px;
 }
 
 .c-learn-more-btn {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 	background-color: transparent;
 	border: 2px solid var(--primary);
 	color: var(--primary);
@@ -71,7 +71,7 @@
 /* Icon/Link Buttons */
 .c-img-btn {
 	padding: 0;
-  	transition: transform 0.3s ease; /* Smooth transition */	
+	transition: transform 0.3s ease; /* Smooth transition */
 }
 
 .c-img-btn:hover {
@@ -86,68 +86,53 @@
 }
 
 svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
 }
 
-svg path{
-    fill: currentColor;
+svg path {
+	fill: currentColor;
 }
 
 .c-ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
 }
 
-/* Carousel */
-/* Carousel card - START */
-
-.c-carousel-div{
-    padding: 0;
-}
-
-/* Outermost container for carousel card */
-.c-carousel-item {
-    display: flex !important;
-    flex: 0 0 33.33% !important;
-    justify-content: center !important;
+.c-screenshot-container {
+	margin-top: 10px;
+	padding: 20px;
 	background-color: var(--card-bg-color);
-	height: auto;
-	padding: 46px;
+}
+
+.c-screenshot-container::-webkit-scrollbar {
+	width: 12px; /* Width of the scrollbar */
+	height: 12px; /* Height for horizontal scrollbar */
+}
+
+/* Style the scrollbar track (background) */
+.c-screenshot-container::-webkit-scrollbar-track {
+	background: var(--scrollbar-track-color);
+}
+
+.c-screenshot-container::-webkit-scrollbar-thumb {
+	background: rgba(var(--primary-rgb), 0.8);
+	border-radius: 10px;
+}
+
+.c-screenshot-container::-webkit-scrollbar-thumb:hover {
+	background: rgba(var(--primary-rgb), 1);
 }
 
 .c-mobile-image {
-	margin-top: 15px;
 	height: 400px;
-	box-shadow: 0 0 5px var(--shadow-color);
 	border-radius: 20px;
 }
 
-.c-web-image {
-	margin-top: 15px;
-	width: 100%;
-	border-radius: 10px;
-}
-/* Crousel card - END */
-
-/* Previous button for carousel */
-.c-carousel-control-prev {
-	width: 30px;
-	margin: 20px 0px 0px 20px;
-	align-self: flex-start;
-}
-
-/* Next button for carousel */
-.c-carousel-control-next {
-	width: 30px;
-	margin: 20px 20px 0px 0px;
-	align-self: flex-start;
-}
-
 .c-section {
-    padding: 0px 25px 0px 25px;
+	padding: 0px 25px 0px 25px;
 }
