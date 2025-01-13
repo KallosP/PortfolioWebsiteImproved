@@ -8,8 +8,6 @@ import ctwImage4 from '../../assets/svg-icons/ctw-images/CTW-Image-4.svg'
 import ctwImage5 from '../../assets/svg-icons/ctw-images/CTW-Image-5.svg'
 import ctwImage6 from '../../assets/svg-icons/ctw-images/CTW-Image-6.svg'
 import ctwImage7 from '../../assets/svg-icons/ctw-images/CTW-Image-7.svg'
-import nextArrowIcon from '../../assets/svg-icons/next-arrow.svg'
-import prevArrowIcon from '../../assets/svg-icons/prev-arrow.svg'
 import { Link } from 'react-router-dom'
 
 function ProjectPage() {
@@ -122,7 +120,7 @@ function ProjectPage() {
 							</a>
 						</li>
 					</ul>
-					<p className={'text-secondary'}>
+					<p className={'text-secondary mt-3'}>
 						California Traffic Watch is a traffic app I built with the purpose of helping California
 						drivers avoid delays and plan their trips with more assurance, offering up-to-date
 						traffic information sourced directly from Caltrans' Commercial Wholesale Web Portal and

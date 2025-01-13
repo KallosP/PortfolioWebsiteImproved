@@ -58,7 +58,7 @@
 	text-align: left;
 	position: relative;
 	background-color: var(--background);
-	padding: 25px 0px 25px 0px;
+	padding: 35px 0px;
 	z-index: 2;
 }
 
@@ -116,7 +116,7 @@ svg path {
 
 .c-screenshot-container {
 	margin-top: 10px;
-	padding: 20px;
+	padding: 40px;
 	background-color: var(--card-bg-color);
 }
 
@@ -145,5 +145,21 @@ svg path {
 }
 
 .c-section {
-	padding: 0px 25px 0px 25px;
+	padding: 0px 35px; 
+}
+
+@media (min-width: 450px) {
+	.c-ul {
+		justify-content: start;
+		align-items: start;
+	}
+}
+
+@media (min-width: 1000px) {
+	.c-info-container {
+		padding: 40px 0px;
+	}
+	.c-section {
+		padding: 0px 80px;
+	}
 }
