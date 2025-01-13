@@ -1,12 +1,20 @@
 @import url('../constants/theme-colors.css');
 
+.c-header-image-container {
+	top: 0;
+	position: sticky;
+	z-index: 1;
+	overflow: hidden;
+}
+
 /* Header Image */
 .c-header-image {
-	height: 80%;
-	max-width: 100%;
+	max-height: 90vh;
+	max-width: 80vw;
+	width: 100%;
 	display: block;
 	margin: auto;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 /* Back Button */
@@ -41,14 +49,17 @@
 }
 
 .c-header-image-container {
-	height: 200px;
-	background-color: #50fbb3;
+	height: 100vh;
+	background-color: #46FFB4
 }
 
 /* Project Info */
 .c-info-container {
 	text-align: left;
+	position: relative;
+	background-color: var(--background);
 	padding: 25px 0px 25px 0px;
+	z-index: 2;
 }
 
 .c-learn-more-btn {
