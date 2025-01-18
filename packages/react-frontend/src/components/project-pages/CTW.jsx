@@ -8,6 +8,7 @@ import ctwImage4 from '../../assets/svg-icons/ctw-images/CTW-Image-4.svg'
 import ctwImage5 from '../../assets/svg-icons/ctw-images/CTW-Image-5.svg'
 import ctwImage6 from '../../assets/svg-icons/ctw-images/CTW-Image-6.svg'
 import ctwImage7 from '../../assets/svg-icons/ctw-images/CTW-Image-7.svg'
+import ctwGroupImage from '../../assets/images/CTW-group-pic.png'
 import { Link } from 'react-router-dom'
 
 function ProjectPage() {
@@ -42,8 +43,8 @@ function ProjectPage() {
 	const liClasses = ['me-2'].join(' ')
 	const mobileImageClasses = ['col', styles['c-mobile-image']].join(' ')
 	const sectionClasses = [styles['c-section']].join(' ')
-	const otherSectionClasses= ['mt-4', styles['c-section']].join(' ')
-	const screenshotContainerClasses = ['container'].join(' ')
+	const otherSectionClasses = ['mt-4', styles['c-section']].join(' ')
+	const screenshotContainerClasses = ['container', styles['c-screenshot-container']].join(' ')
 	const scrollableContainerClasses = [
 		'row',
 		'flex-nowrap',
@@ -127,17 +128,7 @@ function ProjectPage() {
 						CHP's Traffic Incident Page.
 					</p>
 				</section>
-				<div className={screenshotContainerClasses}>
-					<div className={scrollableContainerClasses}>
-						<img src={ctwImage1} className={mobileImageClasses} alt="CTW Mobile Image" />
-						<img src={ctwImage2} className={mobileImageClasses} alt="CTW Mobile Image" />
-						<img src={ctwImage3} className={mobileImageClasses} alt="CTW Mobile Image" />
-						<img src={ctwImage4} className={mobileImageClasses} alt="CTW Mobile Image" />
-						<img src={ctwImage5} className={mobileImageClasses} alt="CTW Mobile Image" />
-						<img src={ctwImage6} className={mobileImageClasses} alt="CTW Mobile Image" />
-						<img src={ctwImage7} className={mobileImageClasses} alt="CTW Mobile Image" />
-					</div>
-				</div>
+				<img src={ctwGroupImage} className={styles['c-screenshots']} ></img>
 				<section className={otherSectionClasses}>
 					<h2 className={h2Classes}>Displaying the Data</h2>
 					<p className="text-secondary mb-5">
