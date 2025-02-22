@@ -1,6 +1,6 @@
-import linkedInIcon from '../assets/svg-icons/linkedIn_button.svg'
-import gitHubIcon from '../assets/svg-icons/GitHub_Button.svg'
-import emailIcon from '../assets/svg-icons/Email_Button.svg'
+import linkedInIcon from '../../../assets/svg-icons/linkedIn_button.svg'
+import gitHubIcon from '../../../assets/svg-icons/GitHub_Button.svg'
+import emailIcon from '../../../assets/svg-icons/Email_Button.svg'
 
 function Introduction() {
 	return (

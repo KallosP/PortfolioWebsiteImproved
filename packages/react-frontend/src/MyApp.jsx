@@ -1,8 +1,8 @@
 // src/MyApp.jsx
 //import React from 'react'
 import { Router, Routes, Route, useLocation } from 'react-router-dom'
-import Home from './components/Home'
-import CTW from './components/project-pages/CTW'
+import Home from './pages/home/HomePage'
+import CTW from './pages/CTWPage'
 import ScrollToTop from './components/ScrollToTop'
 
 function MyApp() {
