@@ -1,0 +1,105 @@
+@import url('../constants/theme-colors.css');
+
+/* Top nav component */
+.c-main-nav {
+	background-color: rgba(var(--nav-background), 0.8);
+	backdrop-filter: blur(9px);
+	border-radius: 10px;
+}
+
+/* Hamburger button */
+.c-navbar-toggler {
+	/* Centers image icon */
+	display: flex;
+	border-color: var(--description-text);
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-radius: 10px;
+	/* Smooths color transition for hover animation */
+	transition:
+		border-color 0.3s ease,
+		background-color 0.3s ease;
+}
+
+.c-navbar-toggler:hover {
+	border-color: rgb(var(--title-text));
+	background-color: rgba(var(--title-text), 0.1);
+}
+
+.c-navbar-toggler:focus {
+	color: transparent;
+}
+
+.c-navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Links */
+.c-nav-link {
+	color: var(--description-text) !important;
+}
+
+.c-first-li {
+	margin-top: 10px !important;
+}
+
+.c-nav-item {
+	transition:
+		border-color 0.3s ease,
+		background-color 0.3s ease;
+	width: 100%;
+	border: 1px solid var(--description-text);
+	border-radius: 100px;
+	text-align: center;
+	margin: 5px;
+}
+
+.c-nav-link:focus {
+	color: var(--description-text);
+}
+
+.c-nav-item:hover {
+	border-color: rgb(var(--title-text));
+	background-color: rgba(var(--title-text), 0.1);
+}
+
+.c-nav-item:hover .c-nav-link {
+	color: rgb(var(--title-text));
+}
+
+/* Styles applied on screens >= 992px (lg) */
+@media (min-width: 992px) {
+	.c-main-nav {
+		width: fit-content;
+		justify-self: center;
+		justify-content: center;
+		align-items: center;
+		border-radius: 100px;
+		padding: 0px;
+	}
+
+	.c-navbar-nav {
+		padding: 0px;
+	}
+
+	.c-nav-item {
+		padding: 7px;
+		margin: 8px 5px;
+	}
+
+	.c-nav-item:active .c-nav-link {
+		color: rgb(var(--title-text)) !important;
+	}
+
+	.c-first-li {
+		margin: 5px 5px 5px 0px !important;
+	}
+
+	.c-last-li {
+		margin: 5px 0px 5px 5px !important;
+	}
+
+	.c-nav-link {
+		padding: 0px;
+	}
+}

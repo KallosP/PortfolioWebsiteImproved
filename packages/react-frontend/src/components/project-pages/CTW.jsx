@@ -1,38 +1,79 @@
-import CTWGraphic from '../assets/images/Feature_Graphic.png'
-import gitHubIcon from '../assets/svg-icons/GitHub_Button.svg'
-import ctwImage1 from '../assets/svg-icons/ctw-images/CTW-Image-1.svg'
-import ctwImage2 from '../assets/svg-icons/ctw-images/CTW-Image-2.svg'
-import ctwImage3 from '../assets/svg-icons/ctw-images/CTW-Image-3.svg'
-import ctwImage4 from '../assets/svg-icons/ctw-images/CTW-Image-4.svg'
-import ctwImage5 from '../assets/svg-icons/ctw-images/CTW-Image-5.svg'
-import ctwImage6 from '../assets/svg-icons/ctw-images/CTW-Image-6.svg'
-import ctwImage7 from '../assets/svg-icons/ctw-images/CTW-Image-7.svg'
-import ctwGroupImage from '../assets/images/CTW-group-pic.png'
+import styles from '../../styles/ctw-page.module.css'
+import CTWGraphic from '../../assets/images/Feature_Graphic.png'
+import gitHubIcon from '../../assets/svg-icons/GitHub_Button.svg'
+import ctwImage1 from '../../assets/svg-icons/ctw-images/CTW-Image-1.svg'
+import ctwImage2 from '../../assets/svg-icons/ctw-images/CTW-Image-2.svg'
+import ctwImage3 from '../../assets/svg-icons/ctw-images/CTW-Image-3.svg'
+import ctwImage4 from '../../assets/svg-icons/ctw-images/CTW-Image-4.svg'
+import ctwImage5 from '../../assets/svg-icons/ctw-images/CTW-Image-5.svg'
+import ctwImage6 from '../../assets/svg-icons/ctw-images/CTW-Image-6.svg'
+import ctwImage7 from '../../assets/svg-icons/ctw-images/CTW-Image-7.svg'
+import ctwGroupImage from '../../assets/images/CTW-group-pic.png'
 import { Link } from 'react-router-dom'
 
 function ProjectPage() {
+	const fluidContainerDivClasses = [
+		'container-fluid',
+		'col',
+		'text-center',
+		styles['c-fluid-container']
+	].join(' ')
+	const backButtonContainerClasses = [
+		'fixed-top',
+		'mx-3',
+		'my-3',
+		styles['c-back-button-container']
+	].join(' ')
+	const headerImageContainerClasses = ['row', styles['c-header-image-container']].join(' ')
+	const headerImageClasses = [styles['c-header-image']].join(' ')
+	const infoContainerClasses = ['row', styles['c-info-container']].join(' ')
+	const h1Classes = ['text-secondary', styles['c-h1']].join(' ')
+	const h2Classes = ['text-secondary', 'mt-3', styles['c-h2']].join(' ')
+	const buttonContainer = ['row', styles['c-button-container']].join(' ')
+	const learnMoreButtonClasses = [
+		'col',
+		'btn',
+		'enable-shadow',
+		'btn-primary',
+		styles['c-learn-more-btn']
+	].join(' ')
+	const imageButtonClasses = ['btn', styles['c-img-btn']].join(' ')
+	const imgClasses = [styles['c-image']].join(' ')
+	const ulClasses = ['list-unstyled', 'mb-2', 'mt-2', styles['c-ul']].join(' ')
+	const liClasses = ['me-2'].join(' ')
+	const mobileImageClasses = ['col', styles['c-mobile-image']].join(' ')
+	const sectionClasses = [styles['c-section']].join(' ')
+	const otherSectionClasses = ['mt-4', styles['c-section']].join(' ')
+	const screenshotContainerClasses = ['container', styles['c-screenshot-container']].join(' ')
+	const scrollableContainerClasses = [
+		'row',
+		'flex-nowrap',
+		'overflow-auto',
+		styles['c-screenshot-container']
+	].join(' ')
+
 	return (
-		<div className="">
-			<div className="">
-				<Link to="/" className="">
+		<div className={fluidContainerDivClasses}>
+			<div className={backButtonContainerClasses}>
+				<Link to="/" className={styles['c-back-button']}>
 					Back
 				</Link>
 			</div>
 
-			<div className="">
-				<img src={CTWGraphic} className=""></img>
+			<div className={headerImageContainerClasses}>
+				<img src={CTWGraphic} className={headerImageClasses}></img>
 			</div>
 
-			<div className="">
-				<section className="">
-					<h1 className="">California Traffic Watch</h1>
-					<ul className="">
-						<li className="">
+			<div className={infoContainerClasses}>
+				<section className={sectionClasses}>
+					<h1 className={h1Classes}>California Traffic Watch</h1>
+					<ul className={ulClasses}>
+						<li className={liClasses}>
 							<a
 								href="https://www.amazon.in/Kape-California-Traffic-Watch/dp/B0DJ7XDY9T"
 								target="_blank"
 								className="text-decoration-none">
-								<button className="">
+								<button className={learnMoreButtonClasses}>
 									<svg
 										width="50"
 										height="50"
@@ -48,33 +89,12 @@ function ProjectPage() {
 								</button>
 							</a>
 						</li>
-						<li className="">
+						<li className={liClasses}>
 							<a
 								href="https://apps.apple.com/us/app/california-traffic-watch/id6736535022"
 								target="_blank"
 								className="text-decoration-none">
-								<button className="">
-									<svg
-										width="50"
-										height="50"
-										viewBox="0 0 50 50"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M11.7779 16.5039H38.222V38.0531C38.222 39.3332 37.1841 40.3711 35.9055 40.3711H33.2568V46.9339C33.2568 48.6005 31.9275 49.9512 30.2866 49.9512C28.6415 49.9512 27.3141 48.6005 27.3141 46.9339V40.3711H22.688V46.9339C22.688 48.6005 21.3561 49.9512 19.7153 49.9512C18.0748 49.9512 16.7429 48.6005 16.7429 46.9339V40.3711H14.0965C12.8176 40.3711 11.7778 39.3332 11.7778 38.0531L11.7779 16.5039ZM6.59575 16.3281C4.93813 16.3281 3.59546 17.6916 3.59546 19.3749V31.2828C3.59546 32.9642 4.93813 34.3301 6.59575 34.3301C8.25366 34.3301 9.59605 32.9642 9.59605 31.2828V19.3749C9.59605 17.6916 8.25366 16.3281 6.59575 16.3281ZM38.2221 14.3325H11.7779C12.1042 10.5651 14.5481 7.32308 18.0662 5.44594L15.5519 1.75414C15.2128 1.25629 15.3408 0.57699 15.8396 0.238025C16.3378 -0.10094 17.0158 0.0279664 17.3565 0.525427L20.0968 4.55199C21.6162 4.0266 23.2654 3.72494 25 3.72494C26.7366 3.72494 28.3859 4.0266 29.9051 4.55267L32.6455 0.526892C32.982 0.0280641 33.6621 -0.100842 34.1603 0.238123C34.6591 0.577087 34.7871 1.25638 34.448 1.75424L31.9358 5.44603C35.4538 7.32201 37.8959 10.564 38.2221 14.3325ZM20.8852 9.21342C20.8852 8.40551 20.231 7.75023 19.4234 7.75023C18.6137 7.75023 17.9595 8.40551 17.9595 9.21342C17.9595 10.0209 18.6159 10.6759 19.4234 10.6759C20.2309 10.6759 20.8852 10.0209 20.8852 9.21342ZM32.2257 9.21342C32.2257 8.40551 31.5693 7.75023 30.7619 7.75023C29.9522 7.75023 29.3 8.40551 29.3 9.21342C29.3 10.0209 29.9522 10.6759 30.7619 10.6759C31.5694 10.6759 32.2257 10.0209 32.2257 9.21342ZM43.4062 16.3239C41.7503 16.3239 40.4039 17.6895 40.4039 19.3729V31.285C40.4039 32.9684 41.7503 34.3344 43.4062 34.3344C45.0642 34.3344 46.4043 32.9685 46.4043 31.285V19.3729C46.4044 17.6895 45.0642 16.3239 43.4062 16.3239Z"
-											fill="#01FFAF"
-										/>
-									</svg>
-									Download
-								</button>
-							</a>
-						</li>
-						<li className="">
-							<a
-								href="https://apps.apple.com/us/app/california-traffic-watch/id6736535022"
-								target="_blank"
-								className="">
-								<button className="">
+								<button className={learnMoreButtonClasses}>
 									<svg
 										width="50"
 										height="50"
@@ -90,28 +110,28 @@ function ProjectPage() {
 								</button>
 							</a>
 						</li>
-						<li className="">
+						<li className={liClasses}>
 							<a
 								href="https://github.com/KallosP/CaliforniaTrafficWatchPreview"
 								target="_blank"
-								className="">
-								<button type="button" className="">
-									<img src={gitHubIcon} alt="LinkedIn" className="" />
+								className="text-decoration-none">
+								<button type="button" className={imageButtonClasses}>
+									<img src={gitHubIcon} alt="LinkedIn" className={imgClasses} />
 								</button>
 							</a>
 						</li>
 					</ul>
-					<p className="">
+					<p className={'text-secondary mt-3'}>
 						California Traffic Watch is a traffic app I built with the purpose of helping California
 						drivers avoid delays and plan their trips with more assurance, offering up-to-date
 						traffic information sourced directly from Caltrans' Commercial Wholesale Web Portal and
 						CHP's Traffic Incident Page.
 					</p>
 				</section>
-				<img src={ctwGroupImage} className=""></img>
+				<img src={ctwGroupImage} className={styles['c-screenshots']} ></img>
 				<section className={otherSectionClasses}>
 					<h2 className={h2Classes}>Displaying the Data</h2>
-					<p className="">
+					<p className="text-secondary mb-5">
 						The app fetches thousands of data records from JSON files provided by Caltrans,
 						containing detailed information on closed-circuit television (CCTV) cameras, lane
 						closures, and chain control signs across California's 12 districts. Additionally, it
@@ -119,16 +139,16 @@ function ProjectPage() {
 						are processed into custom TypeScript types, allowing easy access to the coordinates of
 						individual traffic items, which are used to render them as map markers.
 					</p>
-					<h2 className="">Mapping, Location, and Storage Features</h2>
-					<p className="">
+					<h2 className={h2Classes}>Mapping, Location, and Storage Features</h2>
+					<p className="text-secondary mb-5">
 						I used the Google Maps SDK and React Native Map Clustering module to set up the
 						interactive map and manage marker clustering. These tools enabled the display of a
 						real-time traffic layer, precise user location tracking, and efficient marker
 						clustering. Additionally, persistent user preferences and theme settings were
 						implemented using AsyncStorage and React's Context API.
 					</p>
-					<h2 className="">Mapping, Location, and Storage Features</h2>
-					<p className="">
+					<h2 className={h2Classes}>Mapping, Location, and Storage Features</h2>
+					<p className="text-secondary">
 						A large issue in development was the slow rendering of thousands of markers. Using React
 						Developer Tools to profile the app provided valuable insights, which led me to using
 						component memoization. This optimization effectively reduced unnecessary re-renders,

@@ -1,39 +1,69 @@
-import React, { useState } from 'react'
+//import React from 'react'
+import styles from '../styles/navbar.module.css'
 import closeIcon from '../assets/svg-icons/close.svg'
 
 function Navbar() {
-	const [isNavOpen, setIsNavOpen] = useState(false) // State to control nav visibility
-
-	const navItems = [
-		{ name: 'Home', href: '#' },
-		{ name: 'Projects', href: '#' },
-		{ name: 'Skills', href: '#' },
-		{ name: 'Education', href: '#' },
-		{ name: 'Contact', href: '#' }
-	]
+	const navClasses = [
+		'navbar',
+		'fixed-top',
+		'navbar-expand-lg',
+		'navbar-light',
+		'mx-3',
+		'my-3',
+		styles['c-main-nav']
+	].join(' ')
+	const containerDivClasses = ['container-fluid', 'justify-content-center'].join(' ')
+	const navbarTogglerClasses = ['navbar-toggler', styles['c-navbar-toggler']].join(' ')
+	const navbarCollapseClasses = ['collapse', 'navbar-collapse'].join(' ')
+	const navbarNavClasses = ['navbar-nav', 'align-items-center', styles['c-navbar-nav']].join(' ')
+	const navItemFirstLiClasses = ['nav-item', styles['c-nav-item'], styles['c-first-li']].join(' ')
+	const navItemClasses = ['nav-item', styles['c-nav-item']].join(' ')
+	const navItemLastLiClasses = ['nav-item', styles['c-nav-item'], styles['c-last-li']].join(' ')
+	const navLinkClasses = ['nav-link', styles['c-nav-link']].join(' ')
 
 	return (
-		<nav className="md:flex md:w-auto md:rounded-full md:py-2 md:px-3 sm:flex-col p-2 w-1/2 bg-elevated text-gray-300 bg-opacity-50 backdrop-blur-lg rounded-lg align-center absolute">
-			<button
-				className="flex w-full justify-center sm:flex md:hidden"
-				type="button"
-				aria-label="Toggle navigation"
-				onClick={() => setIsNavOpen(!isNavOpen)} // Toggle the nav visibility
-			>
-				<img src={closeIcon} alt="Toggle navigation" />
-			</button>
-			<ul
-				className={`flex flex-col my-2 md:m-0 md:flex md:flex-row md:gap-4 gap-3 justify-center items-center ${isNavOpen ? 'flex' : 'hidden'}`}>
-				{navItems.map((item, index) => (
-					<li
-						key={index}
-						className={'flex justify-center border-2 transform hover:scale-105 transition duration-300 w-full md:w-auto py-2 px-4 hover:bg-gray-600 rounded-full border border-gray-300'}>
-						<a href={item.href} className="">
-							{item.name}
-						</a>
-					</li>
-				))}
-			</ul>
+		<nav className={navClasses}>
+			<div className={containerDivClasses}>
+				<button
+					className={navbarTogglerClasses}
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<img src={closeIcon} alt="Close" />
+				</button>
+				<div className={navbarCollapseClasses} id="navbarNav">
+					<ul className={navbarNavClasses}>
+						<li className={navItemFirstLiClasses}>
+							<a className={navLinkClasses} aria-current="page" href="#">
+								Home
+							</a>
+						</li>
+						<li className={navItemClasses}>
+							<a className={navLinkClasses} href="#">
+								Projects
+							</a>
+						</li>
+						<li className={navItemClasses}>
+							<a className={navLinkClasses} href="#">
+								Skills
+							</a>
+						</li>
+						<li className={navItemClasses}>
+							<a className={navLinkClasses} href="#">
+								Education
+							</a>
+						</li>
+						<li className={navItemLastLiClasses}>
+							<a className={navLinkClasses} href="#">
+								Contact
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	)
 }
