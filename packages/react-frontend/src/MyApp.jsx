@@ -1,19 +1,21 @@
 // src/MyApp.jsx
 //import React from 'react'
-import { Router, Routes, Route, useLocation } from 'react-router-dom'
-import Home from './pages/home/HomePage'
-import CTW from './pages/CTWPage'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import HomePage from './pages/home/HomePage'
+import CTWPage from './pages/CTWPage'
 import ScrollToTop from './components/ScrollToTop'
 
 function MyApp() {
 	return (
-		<>
-			<ScrollToTop />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="california-traffic-watch" element={<CTW />} />
-			</Routes>
-		</>
+		<BrowserRouter>
+			<div className="flex-col h-screen duration-300 transition-all overflow-y-scroll">
+				<ScrollToTop />
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="california-traffic-watch" element={<CTWPage />} />
+				</Routes>
+			</div>
+		</BrowserRouter>
 	)
 }
 export default MyApp
