@@ -7,9 +7,11 @@ function Home() {
 	return (
 		<div className="flex bg-secondary h-full w-full justify-center relative p-4">
 			<Navbar />
-			{/*<Introduction />
-			<Projects />
-			<Contact />*/}
+			<div className="flex flex-col justify-center">
+				<Introduction />
+				{/*<Projects />
+				<Contact />*/}
+			</div>
 		</div>
 	)
 }

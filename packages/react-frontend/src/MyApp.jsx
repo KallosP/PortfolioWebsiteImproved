@@ -8,7 +8,8 @@ import ScrollToTop from './components/ScrollToTop'
 function MyApp() {
 	return (
 		<BrowserRouter>
-			<div className="flex-col h-screen duration-300 transition-all overflow-y-scroll">
+			{/* Default font is Poppins and white text for all elements */}
+			<div className="flex-col font-poppins text-white h-screen bg-secondary duration-300 transition-all overflow-y-scroll">
 				<ScrollToTop />
 				<Routes>
 					<Route path="/" element={<HomePage />} />

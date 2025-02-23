@@ -1,46 +1,42 @@
 import linkedInIcon from '../../../assets/svg-icons/linkedIn_button.svg'
 import gitHubIcon from '../../../assets/svg-icons/GitHub_Button.svg'
 import emailIcon from '../../../assets/svg-icons/Email_Button.svg'
+import GlowingButton from '../../../components/GlowingButton'
 
 function Introduction() {
 	return (
-		<div className="">
-			<h1 className="">Peter Kallos</h1>
-			<div className="">
-				<p className="">
+		<div className="flex flex-col justify-center self-start mx-26  w-5/7 ">
+			<h1 className="text-5xl lg:text-7xl font-medium">Peter Kallos</h1>
+			<div className="mt-4">
+				<p className="lg:text-xl">
 					I'm a fourth-year Computer Science student at Cal Poly, San Luis Obispo, with a strong
-					interest in <strong className="">full-stack development</strong> and a particular focus on{' '}
-					<strong className="">mobile apps</strong>. Explore my work and learn more about me below.
+					interest in <strong className="text-primary">full-stack development</strong> and a
+					particular focus on <strong className="text-primary">mobile apps</strong>. Explore my work
+					and learn more about me below.
 				</p>
 			</div>
-			<ul className="">
-				<li className="">
-					<a href="https://github.com/KallosP" target="_blank">
-						<button type="button" className="">
-							<img src={gitHubIcon} alt="GitHubIcon" className="" />
-						</button>
+			<ul className="flex mt-4 gap-4">
+				<li className="cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:rotate-12">
+					<a href="https://github.com/KallosP" target="_blank" rel="noopener noreferrer">
+						<img src={gitHubIcon} alt="GitHub Icon" className="w-14 h-14" />
 					</a>
 				</li>
-				<li className="">
+				<li className="cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:rotate-12">
 					<a href="https://www.linkedin.com/in/peter-kallos/" target="_blank">
-						<button type="button" className="">
-							<img src={linkedInIcon} alt="LinkedInIcon" className="" />
-						</button>
+						<img src={linkedInIcon} alt="LinkedInIcon" className="w-14 h-14" />
 					</a>
 				</li>
-				<li className="">
+				<li className="cursor-pointer transition-transform duration-300 transform hover:scale-105 hover:rotate-12">
 					<a href="mailto:pkallos19@gmail.com">
-						<button type="button" className="">
-							<img src={emailIcon} alt="EmailIcon" className="" />
-						</button>
+						<img src={emailIcon} alt="EmailIcon" className="w-14 h-14" />
 					</a>
 				</li>
 			</ul>
-			<a href="/Peter_Kallos_Resume.pdf" download="Peter_Kallos_Resume.pdf">
-				<button type="button" className="">
+			<div className="mt-4">
+				<GlowingButton as="a" href="/Peter_Kallos_Resume.pdf">
 					Download Resume
-				</button>
-			</a>
+				</GlowingButton>
+			</div>
 		</div>
 	)
 }
