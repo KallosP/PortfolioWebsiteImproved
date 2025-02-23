@@ -3,4 +3,18 @@
 @theme {
     --color-primary: #01FFAF; 
     --color-secondary: #20242D; 
+    --color-elevated: #353C4A;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #353C4A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #01FFAF;
+  border-radius: 10px;
 }

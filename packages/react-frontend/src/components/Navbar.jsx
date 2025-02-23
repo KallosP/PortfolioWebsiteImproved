@@ -1,7 +1,9 @@
-//import React from 'react'
+import React, { useState } from 'react'
 import closeIcon from '../assets/svg-icons/close.svg'
 
 function Navbar() {
+	const [isNavOpen, setIsNavOpen] = useState(false) // State to control nav visibility
+
 	const navItems = [
 		{ name: 'Home', href: '#' },
 		{ name: 'Projects', href: '#' },
@@ -11,20 +13,21 @@ function Navbar() {
 	]
 
 	return (
-		<nav className="flex absolute">
+		<nav className="md:flex md:w-auto md:rounded-full md:py-2 md:px-3 sm:flex-col p-2 w-1/2 bg-elevated text-gray-300 bg-opacity-50 backdrop-blur-lg rounded-lg align-center absolute">
 			<button
-				className="xs:inherit md:hidden"
+				className="flex w-full justify-center sm:flex md:hidden"
 				type="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#navbarNav"
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation">
-				<img src={closeIcon} alt="Close" />
+				aria-label="Toggle navigation"
+				onClick={() => setIsNavOpen(!isNavOpen)} // Toggle the nav visibility
+			>
+				<img src={closeIcon} alt="Toggle navigation" />
 			</button>
-			<ul className="flex py-2 px-3 bg-gray-500 text-gray-300 bg-opacity-50 backdrop-blur-lg rounded-full gap-4 justify-center items-center">
+			<ul
+				className={`flex flex-col my-2 md:m-0 md:flex md:flex-row md:gap-4 gap-3 justify-center items-center ${isNavOpen ? 'flex' : 'hidden'}`}>
 				{navItems.map((item, index) => (
-					<li key={index} className={'py-2 transition duration-300 px-4 hover:bg-gray-600 rounded-full border border-gray-300'}>
+					<li
+						key={index}
+						className={'flex justify-center border-2 transform hover:scale-105 transition duration-300 w-full md:w-auto py-2 px-4 hover:bg-gray-600 rounded-full border border-gray-300'}>
 						<a href={item.href} className="">
 							{item.name}
 						</a>
